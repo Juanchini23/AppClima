@@ -14,8 +14,20 @@
     <link th:href="@{/bootstrap/css/sticky-footer-navbar.css}" rel="stylesheet">
 </head>
 <body>
-    <h1 class="text-center mt-3">Bienvenidos</h1>
-    <h5 class="card-title text-center" th:text="${city.name}"></h5>
-    <h5 class="card-title text-center" th:text="${city.weather.description}"></h5>
+    <h1 class="text-center mb-5 mt-3">Bienvenidos</h1>
+    <table class="table container">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Ciudad</th>
+            <th scope="col">Temperatura</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="city : ${cities}">
+            <td th:text="${city.name}"></td>
+            <td th:text="${city.tempDesc}">Otto</td>
+        </tr>
+        </tbody>
+    </table>
 </body>
 </html>
