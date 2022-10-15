@@ -5,21 +5,12 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
-
 @Getter
 @Setter
 @ToString
 @NoArgsConstructor
-@Entity
 public class City {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String _id;
     private double dist;
@@ -32,7 +23,6 @@ public class City {
     private String lon;
     private String zoom;
     private int updated;
-    @OneToOne
     private Weather weather;
     private String forecast;
 
