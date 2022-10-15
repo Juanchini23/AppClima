@@ -15,9 +15,9 @@ public class HomeController {
 
     @GetMapping("/")
     public String home(Model model){
-        service.saveEntity();
-        model.addAttribute("cities", service.getList());
-        return "home";
-    }
+            service.saveEntity();
+            model.addAttribute("cities", service.getList());
+            return "home";
+        }
 
 }
